@@ -13,6 +13,13 @@ class Modal {
    * необходимо выкинуть ошибку.
    * */
   constructor( element ) {
+    this.element = element;
+    // AccountsWidget.registerEvents();
+
+    if (!element) {
+      alert(err);
+    }
+    registerEvents();
 
   }
 
@@ -43,12 +50,14 @@ class Modal {
    * со значением «block»
    * */
   open() {
+    this.element.style.display = 'block';
 
   }
   /**
    * Закрывает окно: удаляет CSS-свойство display
    * */
   close(){
+    this.element.style.display = 'none';
 
   }
 }

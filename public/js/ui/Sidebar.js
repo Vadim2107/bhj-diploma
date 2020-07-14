@@ -1,3 +1,5 @@
+'use strict'
+
 /**
  * Класс Sidebar отвечает за работу боковой колонки:
  * кнопки скрытия/показа колонки в мобильной версии сайта
@@ -18,7 +20,14 @@ class Sidebar {
    * при нажатии на кнопку .sidebar-toggle
    * */
   static initToggleButton() {
+    const sidebarMini = document.querySelector('.sidebar-mini');
+    const sidebarToggle = document.querySelector('.sidebar-toggle');
 
+    sidebarToggle.addEventListener('click', () => {
+      sidebarMini.classList.toggle('sidebar-open');
+      sidebarMini.classList.toggle('sidebar-collapse');
+      return false;
+    });
   }
 
   /**
