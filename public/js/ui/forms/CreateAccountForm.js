@@ -1,3 +1,5 @@
+'use strict'
+
 /**
  * Класс CreateAccountForm управляет формой
  * создания нового счёта
@@ -11,6 +13,9 @@ class CreateAccountForm {
    * и сбрасывает форму
    * */
   onSubmit( options ) {
-
+    Account.create( options, () => {
+      App.getModal('createAccount').close();
+      App.update();
+    });    
   }
 }

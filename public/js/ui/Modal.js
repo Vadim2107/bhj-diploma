@@ -1,3 +1,5 @@
+'use strict'
+
 /**
  * Класс Modal отвечает за
  * управление всплывающими окнами.
@@ -16,10 +18,8 @@ class Modal {
     this.element = element;
     // AccountsWidget.registerEvents();
 
-    if (!element) {
-      alert(err);
-    }
-    registerEvents();
+    if (!element) throw new Error('Element not found');
+    this.registerEvents();
 
   }
 
@@ -29,6 +29,11 @@ class Modal {
    * (с помощью метода Modal.onClose)
    * */
   registerEvents() {
+    // let disMiss = document.querySelectorAll('button[data-dismiss="modal"]');
+    // let arrDisMiss = Array.from(disMiss);
+    // arrDisMiss.map( element => element.onclick = this.onClose.bind( this ));
+    this.dismiss = [...this.element.querySelectorAll( 'button[data-dismiss="modal"]' )];
+    this.dismiss.map( element => element.onclick = this.onClose.bind(this));
 
   }
 
@@ -37,13 +42,13 @@ class Modal {
    * Закрывает текущее окно (Modal.close())
    * */
   onClose( e ) {
-
+    this.close();
   }
   /**
    * Удаляет обработчики событий
    * */
   unregisterEvents() {
-
+    this.dismiss.map( element => element.onclick = '' );
   }
   /**
    * Открывает окно: устанавливает CSS-свойство display

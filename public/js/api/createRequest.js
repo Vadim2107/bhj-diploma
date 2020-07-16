@@ -43,4 +43,3 @@ const createRequest = (options) => {
     
     return xhr;
 };
-
