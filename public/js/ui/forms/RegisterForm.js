@@ -12,14 +12,11 @@ class RegisterForm extends AsyncForm {
    * состояние App.setState( 'user-logged' )
    * и закрывает окно, в котором находится форма
    * */
-  onSubmit( options ) {
-    User.register( options );
-    App.getModal( 'register' ).close();
-    App.setState( 'user-logged' );
-    // User.register( options, () => {
-    //   App.getForm( 'register' ).element.reset();
-    //   App.getModal( 'register' ).close();
-    //   App.setState( 'user-logged' );
-    // });
+  onSubmit( options ) {    
+    User.register( options, () => {
+      App.getForm( 'register' ).element.reset();
+      App.getModal( 'register' ).close();
+      App.setState( 'user-logged' );
+    });
   }
 }
