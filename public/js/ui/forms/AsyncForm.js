@@ -18,7 +18,6 @@ class AsyncForm {
     if (!element) throw new Error('Element not found');
     this.element = element;
     this.registerEvents();
-
   }
 
   /**
@@ -40,15 +39,16 @@ class AsyncForm {
    * }
    * */
   getData() {
-    let objFormData = {};
-    const formData = new FormData(this.element);
-    const entries = formData.entries();
-    for (let item of entries) {
-      const key = item[ 0 ],
-       value = item[ 1 ];
-      objFormData.key = value;
-    }
-    return objFormData;
+    // let objFormData = {};
+    // let formData = new FormData(this.element);
+    // const entries = formData.entries();
+    // for (let item of entries) {
+    //   const key = item[ 0 ],
+    //    value = item[ 1 ];
+    //   objFormData.key = value;
+    // }
+    // return objFormData;
+    return new FormData( this.element );
   }
 
   onSubmit( options ) {

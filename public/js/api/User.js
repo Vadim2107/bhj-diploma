@@ -12,7 +12,7 @@ class User {
    * локальном хранилище.
    * */
   static setCurrent(user) {    
-    window.localStorage.user = JSON.stringify(user);
+    window.localStorage.user = JSON.stringify(user);    
   }
 
   /**
@@ -30,7 +30,7 @@ class User {
    * */
   static current() {    
     if (window.localStorage.user) {
-      return window.localStorage.user && JSON.parse( window.localStorage.user );
+      return window.localStorage.user && JSON.parse( window.localStorage.user );      
     }
   }
 

@@ -6,35 +6,7 @@
       "password": "demo",
       "id": "1",
       "isAuthorized": false
-    },
-    {
-      "name": "undefined",
-      "email": "undefined",
-      "password": "undefined",
-      "id": "8d0rgo1ookcnr7mhu",
-      "isAuthorized": false
-    },
-    {
-      "name": "Вадим Зиновьев",
-      "email": "stragrus@mail.ru",
-      "password": "2107",
-      "id": "8d0rgo50ckcrqgpps",
-      "isAuthorized": false
-    },
-    {
-      "name": "Vadim",
-      "email": "vazinoviev2107@gmail.com",
-      "password": "7777",
-      "id": "8d0rgo78ckcrqwchd",
-      "isAuthorized": false
-    },
-    {
-      "name": "Вадим",
-      "email": "rus@mail.ru",
-      "password": "7878",
-      "id": "8d0rgo4o4kcrst4c7",
-      "isAuthorized": true
-    }
+    }    
   ],
   "accounts": [
     {

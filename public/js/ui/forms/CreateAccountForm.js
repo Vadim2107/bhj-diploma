@@ -5,7 +5,11 @@
  * создания нового счёта
  * Наследуется от AsyncForm
  * */
-class CreateAccountForm {
+class CreateAccountForm extends AsyncForm {
+
+  constructor( element ) {
+    super ( element );
+  }
   /**
    * Создаёт счёт с помощью Account.create и закрывает
    * окно (в котором находится форма) в случае успеха,
@@ -14,8 +18,9 @@ class CreateAccountForm {
    * */
   onSubmit( options ) {
     Account.create( options, () => {
-      App.getModal('createAccount').close();
+      this.element.reset();
+      App.getModal( 'createAccount' ).close();
       App.update();
-    });    
+    });
   }
 }
