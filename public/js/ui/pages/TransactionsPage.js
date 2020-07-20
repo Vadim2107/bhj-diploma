@@ -51,6 +51,7 @@ class TransactionsPage {
     const data = new FormData();
     data.append( 'id', this.lastOptions.account_id );
     Account.remove( '', data, () => App.update() );
+    this.clear();
   }
 
   /**
@@ -77,6 +78,7 @@ class TransactionsPage {
     if ( !options ) return;
     this.lastOptions = options;
     Account.get( options.account_id, null, response => this.renderTitle( response.data.name ));
+    // Account.get( options.id, null, response => this.renderTitle( response.data.name ));
     Transaction.list( options, response => this.renderTransactions( response.data ));
   }
 

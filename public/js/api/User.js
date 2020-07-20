@@ -20,8 +20,8 @@ class User {
    * пользователе из локального хранилища.
    * */
   static unsetCurrent() {    
-    delete window.localStorage.user;
-    // localStorage.removeItem('user');
+    // delete window.localStorage.user;
+    window.localStorage.removeItem('user');
   }
 
   /**
@@ -29,9 +29,9 @@ class User {
    * из локального хранилища
    * */
   static current() {    
-    if (window.localStorage.user) {
+    // if (window.localStorage.user) {
       return window.localStorage.user && JSON.parse( window.localStorage.user );      
-    }
+    // }
   }
 
   /**
@@ -85,11 +85,12 @@ class User {
    * выхода необходимо вызвать метод User.unsetCurrent
    * */
   static logout( data, callback = f => f ) {
-    return createRequest({ method: 'POST', URL: this.URL + '/logout', data: data}, response => {
-      if (response.success) {
+    return createRequest({ method: 'POST', URL: this.URL + '/logout', data: data}, () => {
+      // if (response.success) {
         this.unsetCurrent();
-      }      
-      callback( response );
+      // }
+      // App.setState( 'init' );     
+      callback();
     });
 
   }

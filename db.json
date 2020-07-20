@@ -6,7 +6,14 @@
       "password": "demo",
       "id": "1",
       "isAuthorized": false
-    }    
+    },
+    {
+      "name": "Вадим Зиновьев",
+      "email": "stragrus@mail.ru",
+      "password": "2107",
+      "id": "6uz304kcu6ukfx",
+      "isAuthorized": true
+    }
   ],
   "accounts": [
     {
@@ -23,6 +30,16 @@
       "name": "Бизнес",
       "user_id": "1",
       "id": "3"
+    },
+    {
+      "name": "Наличные",
+      "user_id": "6uz304kcu6ukfx",
+      "id": "6uz90kkcub921w"
+    },
+    {
+      "name": "Сбербанк",
+      "user_id": "6uz304kcu6ukfx",
+      "id": "8d0rgo5nkkcuwdqim"
     }
   ],
   "transactions": [
@@ -160,6 +177,86 @@
       "sum": 300000,
       "type": "expense",
       "user_id": "1"
+    },
+    {
+      "id": "6uz1zckcu7wnj9",
+      "type": "INCOME",
+      "name": "Зарплата",
+      "sum": 120000,
+      "account_id": "6uz2b8kcu7trdl",
+      "created_at": "2020-07-20T07:58:56.036Z"
+    },
+    {
+      "id": "6uz9gokcuarvo0",
+      "type": "INCOME",
+      "name": "Зарплата",
+      "sum": 120000,
+      "account_id": "6uz32kkcuari25",
+      "created_at": "2020-07-20T09:19:12.143Z"
+    },
+    {
+      "id": "6uz7gkkcuasml9",
+      "type": "EXPENSE",
+      "name": "Подарок жене",
+      "sum": 50000,
+      "account_id": "6uz32kkcuari25",
+      "created_at": "2020-07-20T09:19:47.036Z"
+    },
+    {
+      "id": "6uz9cwkcuba044",
+      "type": "INCOME",
+      "name": "Подарок на день рождения",
+      "sum": 20000,
+      "account_id": "6uz90kkcub921w",
+      "created_at": "2020-07-20T09:33:17.715Z"
+    },
+    {
+      "id": "6uz2zkkcuhusab",
+      "type": "EXPENSE",
+      "name": "Купил мороженное",
+      "sum": 500,
+      "account_id": "6uz90kkcub921w",
+      "created_at": "2020-07-20T12:37:25.042Z"
+    },
+    {
+      "id": "6uz7akkcuhyj7w",
+      "type": "INCOME",
+      "name": "Вклад \"Пополняй\"",
+      "sum": 1000000,
+      "account_id": "6uzau0kcuhwc55",
+      "created_at": "2020-07-20T12:40:19.915Z"
+    },
+    {
+      "id": "6uz770kcui1871",
+      "type": "INCOME",
+      "name": "Подработка",
+      "sum": 5000,
+      "account_id": "6uz83wkcui0k6e",
+      "created_at": "2020-07-20T12:42:25.596Z"
+    },
+    {
+      "id": "6uz7c4kcui39d3",
+      "type": "EXPENSE",
+      "name": "Угостил друзей",
+      "sum": 20000,
+      "account_id": "6uz83wkcui0k6e",
+      "created_at": "2020-07-20T12:44:00.422Z"
+    },
+    {
+      "id": "8d0rgo4cgkcuweipa",
+      "type": "INCOME",
+      "name": "Вклад \"Пополняй\"",
+      "sum": 1200000,
+      "account_id": "8d0rgo5nkkcuwdqim",
+      "created_at": "2020-07-20T19:24:40.365Z"
+    },
+    {
+      "id": "8d0rgoab8kcuwo71c",
+      "type": "INCOME",
+      "name": "Вклад \"Сберегай\"",
+      "sum": 500000,
+      "account_id": "8d0rgo5nkkcuwdqim",
+      "created_at": "2020-07-20T19:32:11.807Z"
     }
   ]
 }
