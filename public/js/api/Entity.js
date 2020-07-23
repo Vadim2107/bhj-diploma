@@ -35,7 +35,7 @@ class Entity {
    * Получает информацию о счёте или доходе/расходе
    * (в зависимости от того, что наследуется от Entity)
    * */
-  static get( id = '', data, callback = f => f ) {
+  static get( id, data, callback = f => f ) {
     return createRequest({method: 'GET', URL: this.URL, id, data}, callback);
   }
 
@@ -43,9 +43,9 @@ class Entity {
    * Удаляет информацию о счёте или доходе/расходе
    * (в зависимости от того, что наследуется от Entity)
    * */
-  static remove( id = '', data, callback = f => f ) {
+  static remove( id, data, callback = f => f ) {
     data.append( '_method', 'DELETE' );
-    // data.append( id );    
+    data.append( id, '' );    
     // let modifiedData = Object.assign({ _method: 'DELETE' }, data );    
     return createRequest({method: 'POST', URL: this.URL, id, data}, callback)
   }

@@ -12,7 +12,7 @@
       "email": "stragrus@mail.ru",
       "password": "2107",
       "id": "6uz304kcu6ukfx",
-      "isAuthorized": true
+      "isAuthorized": false
     }
   ],
   "accounts": [
@@ -35,6 +35,11 @@
       "name": "Сбербанк",
       "user_id": "6uz304kcu6ukfx",
       "id": "8d0rgo5nkkcuwdqim"
+    },
+    {
+      "name": "Наличные",
+      "user_id": "6uz304kcu6ukfx",
+      "id": "8d0rgo120kcz0gbm8"
     }
   ],
   "transactions": [
@@ -244,6 +249,14 @@
       "sum": 500000,
       "account_id": "8d0rgo5nkkcuwdqim",
       "created_at": "2020-07-20T19:32:11.807Z"
+    },
+    {
+      "id": "8d0rgo6pokcz0h5xg",
+      "type": "INCOME",
+      "name": "Подарок на день рождения",
+      "sum": 20000,
+      "account_id": "8d0rgo120kcz0gbm8",
+      "created_at": "2020-07-23T16:29:46.947Z"
     }
   ]
 }

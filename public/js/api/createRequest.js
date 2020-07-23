@@ -18,7 +18,7 @@ const createRequest = (options = {}, callback = f => f) => {
     } 
   }
 
-  if ( options.id ) URL += `/${ options.id }`
+  if ( options.id ) URL += `/${ options.id }`;
   if ( options.method == 'GET' && options.data ) URL += encodeURL( options.data );
   else data = options.data;
 
