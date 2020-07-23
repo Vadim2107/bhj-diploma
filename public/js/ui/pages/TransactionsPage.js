@@ -77,7 +77,7 @@ class TransactionsPage {
   render( options ) {
     if ( !options ) return;
     this.lastOptions = options;
-    Account.get( options.account_id, null, response => this.renderTitle( response.data.name ));
+    Account.get( options.account_id, null, response => this.renderTitle( response.data.name ));    
     // Account.get( options.id, null, response => this.renderTitle( response.data.name ));
     Transaction.list( options, response => this.renderTransactions( response.data ));
   }
